@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.body {
+    width: 100%;
+    height: 100vh;
+    background: rgba(73,155,234,1);
+background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 6%, rgba(0,64,133,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(6%, rgba(73,155,234,1)), color-stop(100%, rgba(0,64,133,1)));
+background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 6%, rgba(0,64,133,1) 100%);
+background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 6%, rgba(0,64,133,1) 100%);
+background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 6%, rgba(0,64,133,1) 100%);
+background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 6%, rgba(0,64,133,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#004085', GradientType=1 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.body .area {
+    height: 80%;
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.body .area h2, h3 {
+    text-align: center;
+    font-family: Offside;
+}
+
+.area .g-input {
+    margin-bottom: 10px;
+    position: relative;
+    left: -25px;
+}
+
+.area .g-input input {
+    width: 100%;
+    padding: 15px 10px 15px 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #e2e1e1;
+}
+
+.area .g-input label {
+    position: absolute;
+    font-size: 1rem;
+    top: 13px;
+    left: 15px;
+}
+
+.area .cont-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.area .cont-input button {
+    padding: 5px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgba(17, 167, 17, 0.685);
+    border-radius: 20px;
+    font-size: 18px;
+    font-family: Anton;
+    color: white;
+}
+
+@media screen and (max-width: 430px) {
+    .area h2 {
+        font-size: 1.3rem;
+    }
+}

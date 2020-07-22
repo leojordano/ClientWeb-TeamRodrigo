@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom";
 
-function App() {
+import { connect } from 'react-redux'
+
+import LoginPage from './components/loginPage'
+import StatePage from './components/statePage'
+
+
+function App({ user }) {
+
+  // console.log('Minha Store' , user)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Router>
+          <Switch>
+
+            <Route path='/state'>
+              <StatePage />
+            </Route>
+
+            <Route path='/'>
+              <LoginPage />
+            </Route>
+
+          </Switch>
+        </Router>
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    user: state
+  }
+}
+
+const mapDispatchToProps = { }
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
