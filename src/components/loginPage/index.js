@@ -30,9 +30,11 @@ function LoginPage({ setUserLoged }) {
   return (
     <div className='body'>
         <div className="area">
+            <div>
                 <h2>Team Rodrigo Plataform</h2>
                 <h3>Member Area</h3>
                 <FormLogin name={name} setName={setName} email={email} setEmail={setEmail} pass={pass} setPass={setPass} makeLogin={makeLogin} />
+            </div>
         </div>
     </div>
   );

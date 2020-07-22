@@ -21,12 +21,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', end
 
 .body .area {
     height: 80%;
-    width: 80%;
+    width: 50%;
     background-color: white;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
